@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  div#app
+    nav-menu
+    main.container.my-5
+      div.row
+        aside.col-lg-4.mb-5.text-center.hero-img-container
+          img.img-fluid(:src="chiliImage", alt="White Chicken Chili")
+        section.col-lg-8
+          h2.page-title Comments
+          div#blogposts
+            blog-post(v-for="(post, key) in posts", :key="key", :post="post", @show-profile="displayProfile")
+            
+    div.modal-overlay(v-if="activePost", @click.self="activePost = null")
+      div.profile-modal
+        button.close-btn(@click="activePost = null") &times;
+        h3 {{ activePost.author }}
+        p
+          strong Foodie Level:
+          | 
+          span.badge.badge-success {{ activePost.level }}
+        p
+          strong Bio:
+          | {{ activePost.bio }}
+        button.bottom-close-btn(@click="activePost = null") Close
+
+    footer.footer.text-center
+      div.container
+        | &copy; Copyright FOOD BLOG

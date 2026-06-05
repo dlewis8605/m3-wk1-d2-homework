@@ -1,0 +1,201 @@
+body {
+    background-color: #f4f6f9;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.custom-nav {
+    background-color: #1a1a1a !important;
+    border-bottom: 3px solid #3cbea0;
+    padding: 10px 0;
+}
+
+.custom-nav .navbar-brand {
+    font-family: 'Sacramento', cursive;
+    font-size: 2.5rem;
+    color: #f8c146 !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.custom-nav .nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px !important;
+    color: #e0e0e0 !important;
+    transition: color 0.3s ease;
+}
+
+.custom-nav .nav-link:hover {
+    color: #3cbea0 !important;
+}
+
+.page-title {
+    color: #2c3e50;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.page-title::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 5px;
+    background-color: #3cbea0;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.hero-img-container img {
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+    width: 100%;
+    max-width: 350px;
+    border: 5px solid white;
+}
+
+.hero-img-container img:hover {
+    transform: scale(1.03);
+}
+
+.post-card {
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    background-color: white;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.post-author {
+    color: #3cbea0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.post-date {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.post-text {
+    line-height: 1.6;
+    color: #555;
+}
+
+.profile-pic {
+    cursor: pointer;
+    border-radius: 50%;
+    float: left;
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border: 3px solid #3cbea0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(60, 190, 160, 0.3);
+}
+
+.profile-pic:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 15px rgba(60, 190, 160, 0.5);
+}
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1050;
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-modal {
+    background-color: #1a1a1a;
+    color: #f8f9fa;
+    padding: 30px 30px 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    z-index: 1060;
+    width: 380px;
+    text-align: center;
+    position: relative;
+    border-top: 6px solid #3cbea0;
+    animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalPop {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.profile-modal h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #3cbea0;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.profile-modal p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.profile-modal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background: none;
+    font-size: 1.8em;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.profile-modal .close-btn:hover {
+    color: #fff;
+}
+
+.profile-modal .bottom-close-btn {
+    margin-top: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #f8f9fa;
+    border: 2px solid #f8f9fa;
+    padding: 8px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.profile-modal .bottom-close-btn:hover {
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    padding: 25px 0;
+    margin-top: 60px;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
